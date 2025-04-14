@@ -1,0 +1,63 @@
+# CA MONK Frontend Internship Assignment 
+
+## Overview 📝
+The **Sentence Construction Tool** is a fun and interactive web application that helps users practice sentence construction. The app presents users with incomplete sentences and a set of word options, and users must select the correct words to fill in the blanks. 
+
+Key features include:
+- A 30-second timer for each question ⏱️
+- Auto-navigation to the next question when the timer ends 🔄
+- A feedback screen displaying the user's performance at the end ✅
+
+
+## Features 🌟
+- **Interactive Sentence Blanks**: The app displays incomplete sentences where users must fill in the missing words.
+- **Word Options**: Users are provided with 4 word options to choose from for each blank space.
+- **Unselect Word**: Users can unselect a word by clicking on a filled blank, allowing flexibility.
+- **Timer**: Each question comes with a 30-second countdown ⏳. The user needs to complete the sentence within this time.
+- **Auto-Navigation**: Once the timer expires, the app automatically navigates to the next question ➡️.
+- **Next Button**: The "Next" button is enabled only when all blanks are filled. Users need to complete the sentence before moving forward.
+- **Feedback Screen**: After finishing the quiz, a feedback screen shows:
+  - All correct and incorrect answers 🟢🔴
+  - The correct answers for any incorrect responses ✔️
+  - User’s score out of 10 🏆
+- **Lazy Loading**: The app implements lazy loading to ensure smooth performance when fetching large sets of questions 📥.
+- **Error Handling**: Proper error handling ensures that users are shown helpful messages if something goes wrong, like a failed API request ⚠️.
+
+## Technical  ⚙️
+- **React**: The app is built using React to manage the user interface.
+- **Vite**: Vite is used as the build tool for fast development.
+- **Tailwind CSS**: Styling is done using Tailwind CSS for easy and responsive design.
+- **JSON API**: The app fetches the questions data from a local API using JSON Server.
+
+
+
+## Folder Structure 📂
+/sentence-construction-tool
+│
+├── /public                     # question.json
+├── /src                        # Source files
+│   ├── /components             # Reusable components (Timer, WordOptions, etc.)
+                                  ├── /ErrorScreen            
+                                  ├── /Feedback                
+                                  ├── /LoadingScreen               
+                                  ├── /OptionButton
+                                  ├── /ProgressBar           
+                                  ├── /Question              
+                                  ├── /QuitConfirmatjion             
+                                  ├── /SentenceIntro              
+                                  ├── /TestScreen
+                                  ├── /Timer
+│   ├── /styles                 # Tailwind CSS files
+│   ├── App.jsx                # Main app component
+│   └── index.jsx               # Entry point for the React app
+│
+├── /json-server                # JSON server for local API
+│   └── db.json                 # Sample question data in JSON format
+│
+├── /tailwind.config.js         # Tailwind CSS configuration
+├── /tsconfig.json              # TypeScript configuration (if using TypeScript)
+├── /package.json               # Project dependencies and scripts
+└── /README.md                  # Project documentation
+
+
+
